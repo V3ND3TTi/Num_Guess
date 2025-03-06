@@ -21,13 +21,13 @@ def play_game():
             print('Congrats! You guessed the secret number!')
             break
         elif user_guess > secret_num:
-            print('Too High!')
-            max_guesses -= 1
+            print(f'Too High! {max_guesses - 1} guesses remain.')
         else:
-            print('Too Low!')
-            max_guesses -= 1
+            print(f'Too Low! {max_guesses - 1} guesses remain.')
+
+        max_guesses -= 1
 
     if max_guesses == 0:
-        print('Sorry, you ran out of guesses. Better luck next time!')
+        print(f'Sorry, you ran out of guesses. The secret number was {secret_num}. Better luck next time!')
 
 play_game()
